@@ -27,7 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_28_162415) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
+      t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
     t.index ["participent_id"], name: "index_messages_on_participent_id"
   end
 
