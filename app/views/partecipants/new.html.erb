@@ -1,0 +1,18 @@
+<div class="container">
+  <%= form_with url: "search_friend/:email", method: :post, class: "inline-hangover-form my-3" do |f| %>
+    <%= f.text_field :email, placeholder: "Search...", class: "bg-white border-0" %>
+    <%= button_tag(type: "submit", class: "btn btn-flat") do %>
+        <i class="fas fa-search black"></i>
+    <% end %>
+  <% end %>
+
+  <div class="d-flex w-87 mx-auto justify-content-between">
+    <p>List of Friends</p>
+    <p>add all <i class="fa-regular fa-square-check"></i></p>
+  </div>
+  <div class="friend-card d-flex justify-content-between w-75 align-item-center">
+    <%= image_tag "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-HD-Image.png", class: "avatar" %>
+    <p class="mr-5">Tuco Salmanca</p>
+    <i class="fa-solid fa-plus"></i>
+  </div>
+</div>

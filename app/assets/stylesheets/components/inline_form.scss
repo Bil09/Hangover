@@ -1,0 +1,15 @@
+.inline-hangover-form{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $white;
+  color: $light-grey;
+  width: 80%;
+  height: 3.375rem;
+  border-radius: 40px;
+  margin-inline: auto;
+  input{
+    height: fit-content;
+    margin-left: 1rem;
+  }
+}
