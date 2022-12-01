@@ -16,6 +16,6 @@ class PartiesController < ApplicationController
   private
 
   def party_params
-    params.require(:party, :latitude, :longitude).permit(:start_time)
+    params.require(:party, :address).permit(:start_time)
   end
 end

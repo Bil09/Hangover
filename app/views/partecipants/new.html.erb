@@ -1,1 +1,9 @@
-<%= form_with url: "search_friend/:id", method: :post,  %>
+<%= form_with url: "search_friend/:email", method: :post, class: "search-form-control form-group" do |f| %>
+<%= f.text_field :email, placeholder: "Search...", class: "form-control" %>
+<%= button_tag(type: "submit", class: "btn btn-flat") do %>
+    <i class="fas fa-search"></i>
+<% end %>
+<div>
+  <p>List of Friends</p>
+  <p>add all <i class="fa-regular fa-square-check"></i></p>
+</div>
