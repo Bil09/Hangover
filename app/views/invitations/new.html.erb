@@ -1,0 +1,11 @@
+<div class="container mt-3">
+  <h1><strong>Invite friend</strong> </h1>
+
+
+  <%= form_with url: invitations_path, class: "search-form-control form-group", method: :post do |f| %>
+    <%= f.text_field :email, placeholder: "Enter email of your friend...", class: "form-control string required" %>
+    <%= f.submit "Invite", class: "btn btn-flat" do %>
+        <i class="fas fa-search"></i>
+    <% end %>
+  <% end %>
+</div>
