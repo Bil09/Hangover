@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
   get "map", to: "maps#index"
+  get "party", to: "parties#new"
 
   resources :invitations, only: [:new, :create]
 
