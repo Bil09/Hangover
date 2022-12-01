@@ -42,3 +42,30 @@
 .fa-sm {
     font-size: 26px !important;
 }
+
+.popup {
+    color: $white;
+    text-align: center;
+}
+
+.select-location {
+    background-color: $blue;
+    color: $white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 25px;
+    margin: 5%;
+}
+
+.homeparty {
+    background-color: $grey;
+    color: $white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 25px;
+    margin: 5%;
+}
+
+.h2 {
+    margin-top: 5%;
+}

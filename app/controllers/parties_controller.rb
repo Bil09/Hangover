@@ -1,6 +1,10 @@
 class PartiesController < ApplicationController
   def new
     @party = Party.new
+    @parties = Party.all
+    @markers = @parties.geocoded.map do |party|
+      { lat: party.latitude, lng: party.longitude }
+    end
   end
 
   def create
@@ -16,6 +20,6 @@ class PartiesController < ApplicationController
   private
 
   def party_params
-    params.require(:party, :latitude, :longitude).permit(:start_time)
+    params.require(:party).permit(:address)
   end
 end
