@@ -13,11 +13,11 @@
 
   <body>
     <%= render "shared/flashes" %>
-    <% unless controller_name == "parties" %>
+    <% if controller_name != "parties" && controller_name !=  "chatrooms" %>
     <%= render "shared/navbar" %>
     <% end %>
     <%= yield %>
-    <% unless controller_name == "parties" %>
+    <% if controller_name != "parties" && controller_name !=  "chatrooms" %>
     <%= render "shared/bottom_nav" %>
     <% end %>
 
