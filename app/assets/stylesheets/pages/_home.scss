@@ -3,3 +3,17 @@
     height: 723px;
     width: 100vw;
 }
+
+.popup {
+    position: absolute;
+    z-index: 999999999;
+    width: 100vw;
+    height: 40vh;
+    background-color: $dark-grey;
+    color: &white;
+    border-radius: 46px;
+}
+
+.hide-popup {
+    display: none;
+}
