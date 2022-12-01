@@ -7,10 +7,9 @@
 
   <div class="popup hide-popup" data-toggle-target="popup">
     <h2 class="h2">Create a new Party</h2>
-    <%= link_to"Homeparty", root_path   %>
+    <%= link_to"Homeparty", root_path, class:"homeparty"   %>
       <%# link needs to change %>
     <p>- or -</p>
-    <%= link_to"Select Location", root_path%>
-      <%# link needs to change %>
+    <%= link_to"Select Location", party_path, class:"select-location"%>
   </div>
 </div>
