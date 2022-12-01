@@ -1,4 +1,4 @@
-<div class="container">
+<div class="mw-100" data-controller="check">
   <%= form_with url: "search_friend/:email", method: :post, class: "inline-hangover-form my-3" do |f| %>
     <%= f.text_field :email, placeholder: "Search...", class: "bg-white border-0" %>
     <%= button_tag(type: "submit", class: "btn btn-flat") do %>
@@ -8,11 +8,22 @@
 
   <div class="d-flex w-87 mx-auto justify-content-between">
     <p>List of Friends</p>
-    <p>add all <i class="fa-regular fa-square-check"></i></p>
+    <p>add all <i class="fa-regular fa-square" data-check-target="checkAll" data-action="click->check#checkAll"></i></p>
   </div>
-  <div class="friend-card d-flex justify-content-between w-75 align-item-center">
+
+  <div class="friend-card d-flex mx-auto border-1 my-3 justify-content-around align-items-center">
     <%= image_tag "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-HD-Image.png", class: "avatar" %>
-    <p class="mr-5">Tuco Salmanca</p>
-    <i class="fa-solid fa-plus"></i>
+    <p class="">Tuco Salmanca</p>
+    <i class="fa-solid fa-plus mb-3" data-action="click->check#checkOne" data-check-target="checkbox"></i>
   </div>
+  <div class="friend-card d-flex mx-auto border-1 my-3 justify-content-around align-items-center">
+    <%= image_tag "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-HD-Image.png", class: "avatar" %>
+    <p class="">Tuco Salmanca</p>
+    <i class="fa-solid fa-plus mb-3" data-action="click->check#checkOne" data-check-target="checkbox"></i>
+  </div>
+
+
+
+
+  <%= link_to "Confirm", root_path, class: "btn btn-lg btn-primary rounded-pill fixed-bottom w-50 mx-auto my-4" %>
 </div>
