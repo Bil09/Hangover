@@ -4,9 +4,13 @@
   <span class="btn-plus" data-action="click->toggle#toggle"><i class="fa-solid fa-plus fa-sm plus-icon"></i></span>
   <a href="#"><i class="fa-regular fa-comments fa-sm item_left item"></i></a>
   <a href="#"><i class="fa-solid fa-gear fa-sm item_right item"></i></a>
+
   <div class="popup hide-popup" data-toggle-target="popup">
     <h2 class="h2">Create a new Party</h2>
-    <%= link_to"Homeparty", _path %>
+    <%= link_to"Homeparty", root_path   %>
+      <%# link needs to change %>
     <p>- or -</p>
-    <%= link_to"Select Location", _path%>  </div>
+    <%= link_to"Select Location", root_path%>
+      <%# link needs to change %>
+  </div>
 </div>
