@@ -3,8 +3,8 @@ class MessagesController < ApplicationController
     @chatroom = Chatroom.find(params[:chatroom_id])
     @message = Message.new(message_params)
     @message.chatroom = @chatroom
-    @message.participent = Participent.find_by(party_id: @chatroom.party_id, user_id: current_user.id)
-    
+    @message.participant = Participant.find_by(party_id: @chatroom.party_id, user_id: current_user.id)
+
     if @message.save
       ChatroomChannel.broadcast_to(
         @chatroom,

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_01_103919) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_02_130016) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -33,22 +33,22 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_103919) do
 
   create_table "messages", force: :cascade do |t|
     t.bigint "chatroom_id", null: false
-    t.bigint "participent_id", null: false
+    t.bigint "participant_id", null: false
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
-    t.index ["participent_id"], name: "index_messages_on_participent_id"
+    t.index ["participant_id"], name: "index_messages_on_participant_id"
   end
 
-  create_table "participents", force: :cascade do |t|
+  create_table "participants", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "party_id", null: false
-    t.integer "status"
+    t.integer "status", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["party_id"], name: "index_participents_on_party_id"
-    t.index ["user_id"], name: "index_participents_on_user_id"
+    t.index ["party_id"], name: "index_participants_on_party_id"
+    t.index ["user_id"], name: "index_participants_on_user_id"
   end
 
   create_table "parties", force: :cascade do |t|
@@ -79,8 +79,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_103919) do
   add_foreign_key "chatrooms", "parties"
   add_foreign_key "invitations", "users"
   add_foreign_key "messages", "chatrooms"
-  add_foreign_key "messages", "participents"
-  add_foreign_key "participents", "parties"
-  add_foreign_key "participents", "users"
+  add_foreign_key "messages", "participants"
+  add_foreign_key "participants", "parties"
+  add_foreign_key "participants", "users"
   add_foreign_key "parties", "users"
 end

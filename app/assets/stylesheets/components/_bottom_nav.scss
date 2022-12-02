@@ -54,18 +54,22 @@
     text-decoration: none;
     padding: 10px;
     border-radius: 25px;
-    margin: 5%;
+    width: 94px;
 }
 
 .homeparty {
     background-color: $grey;
     color: $white;
     text-decoration: none;
-    padding: 10px;
     border-radius: 25px;
-    margin: 5%;
+    width: 94px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .h2 {
     margin-top: 5%;
+    margin-bottom: 20px;
 }
