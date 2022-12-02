@@ -10,12 +10,11 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
-
-  <body class=<%= "bg-dark-grey" if current_page?(controller: 'partecipants', action: 'new')%>>
-    <%= render "shared/navbar" unless current_page?(controller: 'partecipants', action: 'new') %>
+  <body class=<%= "bg-dark-grey" if controller_path == "partecipants" && action_name == "new"%>>
+    <%= render "shared/navbar" unless controller_path == "partecipants" && action_name == "new" %>
     <%= render "shared/flashes" %>
     <%= yield %>
-    <%= render "shared/bottom_nav" unless current_page?(controller: 'partecipants', action: 'new') %>
+    <%= render "shared/bottom_nav" unless controller_path == "partecipants" && action_name == "new" %>
 
   </body>
 </html>
