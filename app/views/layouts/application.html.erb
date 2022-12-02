@@ -14,9 +14,8 @@
     <%= render "shared/navbar" unless controller_path == "participants" && controller_path == "chatrooms" && controller_path == "parties" %>
     <%= render "shared/flashes" %>
     <%= yield %>
-    <% if controller_name != "parties" && controller_name !=  "chatrooms" && controller_name != "participants" %>
-    <%= render "shared/bottom_nav" %>
-    <% end %>
+
+      <%= render "shared/bottom_nav" unless (controller_name == "parties") || (controller_name == "chatrooms" && action_name == "show") || (controller_name == "participants") %>
 
   </body>
 </html>
