@@ -4,13 +4,11 @@
 
 import { application } from "./application"
 
-<<<<<<< HEAD
 import CheckController from "./check_controller"
 application.register("check", CheckController)
-=======
+
 import ChatroomSubscriptionController from "./chatroom_subscription_controller"
 application.register("chatroom-subscription", ChatroomSubscriptionController)
->>>>>>> main
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)

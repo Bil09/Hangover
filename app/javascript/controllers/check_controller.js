@@ -2,34 +2,40 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="check"
 export default class extends Controller {
-  static targets = ["checkAll", "checkbox"]
+  static targets = ["checkAll", "checkbox", "checkboxIcon"]
+  static values = {
+    party: Number,
+    friend: Number
+  }
+
   connect() {
-    console.log("connected");
+    console.log(this.friendValue);
   }
   checkAll() {
-    console.count("click v3 all");
+    console.count("click v9 all");
+    this.checkboxTargets.forEach(element => {
+          element.checked = !element.checked
+    });
     if (this.checkAllTarget.classList[1] === "fa-square") {
       this.checkAllTarget.classList.replace("fa-square", "fa-square-check")
-      this.checkboxTargets.forEach(element => {
+      this.checkboxIconTargets.forEach(element => {
         element.classList.replace("fa-plus", "fa-check")
-      });
-    } else {
-      this.checkAllTarget.classList.replace("fa-square-check", "fa-square");
-      this.checkboxTargets.forEach(element => {
-        element.classList.replace("fa-check", "fa-plus")
-      });
+      })
+     } else {
+        this.checkAllTarget.classList.replace("fa-square-check", "fa-square");
+        this.checkboxIconTargets.forEach(element => {
+          element.classList.replace("fa-check", "fa-plus")
+      })
     }
   }
+
   checkOne(event) {
-    console.count("ld");
-    console.log(event.srcElement);
     if (event.srcElement.classList[1] == "fa-plus") {
-      console.log(event.srcElement.classList[1]);
       event.srcElement.classList.replace("fa-plus", "fa-check")
+      event.srcElement.previousElementSibling.checked = !event.srcElement.previousElementSibling.checked
     } else {
-      console.log("inside")
-      console.log(event.srcElement.classList[1]);
       event.srcElement.classList.replace("fa-check", "fa-plus")
+      event.srcElement.previousElementSibling.checked = !event.srcElement.previousElementSibling.checked
     }
   }
 }

@@ -11,7 +11,7 @@ class PartiesController < ApplicationController
     @party = Party.new party_params
     @party.user = current_user
     if @party.save
-      redirect_to new_partecipants_path
+      redirect_to new_participants_path
     else
       render :new, :unproccesable_entity
     end
