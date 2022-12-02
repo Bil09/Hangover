@@ -8,10 +8,10 @@ class PartiesController < ApplicationController
   end
 
   def create
-    @party = Party.new party_params
+    @party = Party.new address: params[:address]
     @party.user = current_user
     if @party.save
-      redirect_to new_participants_path
+      redirect_to new_party_participant_path(@party)
     else
       render :new, :unproccesable_entity
     end
