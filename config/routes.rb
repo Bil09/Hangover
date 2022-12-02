@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   get "party", to: "parties#new"
 
   resources :partecipants, only: %i[new create]
-  resources :invitations, only: [:new, :create]
-  resources :chatrooms, only: :show do
+  resources :invitations, only: %i[new create]
+  resources :chatrooms, only: %i[show index] do
     resources :messages, only: :create
   end
 

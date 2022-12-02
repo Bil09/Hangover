@@ -1,0 +1,23 @@
+<h1>Chats</h1>
+<ul>
+  <% @chatroom.each do |chatroom| %>
+    <div class="notification">
+      <div class="notification-content">
+        <li>
+          <p><small>14th January</small></p>
+          <h2><%= link_to chatroom.name, chatroom_path(chatroom), class:"text-decoration-none" %></h2>
+          <p><%= Party.find(chatroom.party_id).address %></p>
+
+          <div class="border-top">
+            <% if chatroom.messages != [] %>
+              <p><%= Participent.find(chatroom.messages[-1].participent_id).user.email%>: <%= chatroom.messages[-1].content %></p>
+            <% else %>
+              <p>No messages</p>
+            <% end %>
+          </div>
+        </li>
+      </div>
+      <img src='https://kitt.lewagon.com/placeholder/users/arthur-littm' class="avatar-large" />
+    </div>
+  <% end %>
+</ul>
