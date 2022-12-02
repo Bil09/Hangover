@@ -1,6 +1,10 @@
 class PartiesController < ApplicationController
   def new
     @party = Party.new
+    @parties = Party.all
+    @markers = @parties.geocoded.map do |party|
+      { lat: party.latitude, lng: party.longitude }
+    end
   end
 
   def create
