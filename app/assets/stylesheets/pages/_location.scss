@@ -13,6 +13,7 @@
       z-index: 999999999;
       margin-left: 25px;
       background-color: $white;
+      color: $black;
   }
   
   .search-form-control .form-control:focus {
@@ -31,4 +32,8 @@
       margin-left: 63.5px;
       text-align: center;
       text-decoration: none
+  }
+  
+  .btn-search:hover {
+      background-color: $dark-blue;
   }

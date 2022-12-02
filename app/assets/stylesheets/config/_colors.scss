@@ -6,24 +6,28 @@ $grey: #363636;
 $light-grey: #808080;
 $white: #FCFCFC;
 $blue: #006EE6;
+$dark-blue:#0050a5;
 $red: #FD1015;
 $yellow: #FFC65A;
 $orange: #E67E22;
 $green: rgb(50, 197, 21);
 $light-gray: #F4F4F4;
+.black {
+    color: $black;
+}
 
-.black{
-  color: $black;
+.dark-grey {
+    color: $dark-grey;
 }
-.dark-grey{
-  color: $dark-grey;
+
+.grey {
+    color: $grey;
 }
-.grey{
-  color: $grey;
+
+.light-grey {
+    color: $light-grey;
 }
-.light-grey{
-  color: $light-grey;
-}
-.white{
-  color: $white;
+
+.white {
+    color: $white;
 }
