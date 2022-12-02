@@ -1,6 +1,6 @@
 class ChatroomsController < ApplicationController
   def index
-    @chatroom = current_user.party.map(&:chatroom)
+    @chatrooms = current_user.chatrooms
   end
 
   def show

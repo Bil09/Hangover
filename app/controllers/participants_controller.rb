@@ -8,6 +8,7 @@ class ParticipantsController < ApplicationController
   def create
     participants = participant_params[:friend_ids]
     party = Party.find params[:party_id]
+    Participant.create(user: current_user, party: party) # Createn participant for the organizer
     participants.each do |participant|
       Participant.create user: User.find(participant), party_id: params[:party_id]
     end
