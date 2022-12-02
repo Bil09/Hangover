@@ -10,7 +10,7 @@
 
           <div class="border-top">
             <% if chatroom.messages != [] %>
-              <p><%= Participent.find(chatroom.messages[-1].participent_id).user.email%>: <%= chatroom.messages[-1].content %></p>
+              <p><%= Participant.find(chatroom.messages[-1].participant_id).user.email%>: <%= chatroom.messages[-1].content %></p>
             <% else %>
               <p>No messages</p>
             <% end %>
