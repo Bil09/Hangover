@@ -1,7 +1,7 @@
 <div>
   <div>
-  <%= form_with url: invitations_path, class: "search-form-control form-group", method: :post do |f| %>
-    <%= f.text_field :email, placeholder: "Enter Location...", class: "form-control string required" %>
+  <%= form_with url: parties_path, class: "search-form-control form-group", method: :post do |f| %>
+    <%= f.text_field :address, placeholder: "Enter Location...", class: "form-control string required" %>
   <% end %>
   </div>
   <div>
@@ -13,5 +13,5 @@
       </div>
   </div>
 
-  <%= link_to "Confimre Location", new_participant_path, class:"btn-search"%>
+  <%# <%= link_to "Confimre Location", new_party_participant_path, class:"btn-search"%>
 </div>
