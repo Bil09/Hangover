@@ -10,15 +10,15 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
-
-  <body>
+  <body class=<%= "bg-dark-grey" if controller_path == "participants"%>>
+    <%= render "shared/navbar" unless controller_path == "participants" && controller_path == "chatrooms" && controller_path == "parties" %>
     <%= render "shared/flashes" %>
-    <% if controller_name != "parties" && controller_name !=  "chatrooms" %>
+<% unless (controller_name == "parties" && params[:action] == "new") || (controller_name == "chatrooms" && params[:action] == "show") %>  <nav>
     <%= render "shared/navbar" %>
     <% end %>
     <%= yield %>
-    <% if controller_name != "parties" && controller_name !=  "chatrooms" %>
-    <%= render "shared/bottom_nav" %>
+    <% unless (controller_name == "parties" && params[:action] == "new") || (controller_name == "chatrooms" && params[:action] == "show") %>
+      <%= render "shared/bottom_nav" %>
     <% end %>
 
   </body>
