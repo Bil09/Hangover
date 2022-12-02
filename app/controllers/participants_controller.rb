@@ -7,10 +7,11 @@ class ParticipantsController < ApplicationController
 
   def create
     participants = participant_params[:friend_ids]
+    party = Party.find params[:party_id]
     participants.each do |participant|
       Participant.create user: User.find(participant), party_id: params[:party_id]
     end
-    redirect_to root_path
+    redirect_to chatrooms_path(party.chatroom)
   end
 
   private

@@ -11,6 +11,7 @@ class PartiesController < ApplicationController
     @party = Party.new address: params[:address]
     @party.user = current_user
     if @party.save
+      @party.chatroom = Chatroom.create party: @party, name: "Superduper#{@party.id}"
       redirect_to new_party_participant_path(@party)
     else
       render :new, :unproccesable_entity
