@@ -10,15 +10,19 @@
     <% end %>
   </div>
 
-  <%= simple_form_for [@chatroom, @message],
-    html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: " d-flex" } do |f|
+  <%= form_for [@chatroom, @message],
+  html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }, class: "message-form border-0" } do |f|
   %>
-    <%= f.input :content,
+    <%= button_tag class: "photo" do %>
+      <i class="fa-solid fa-camera fa-xl"></i>
+    <% end %>
+    <%= f.text_field :content,
       label: false,
-      placeholder: "Message ##{@chatroom.name}",
-      wrapper_html: {class: "flex-grow-1"}
-
+      class: "msg-input border-0",
+      placeholder: "Type message..."
     %>
-    <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+    <%= button_tag type: "submit", class: "rounded-circle submit" do %>
+      <i class="fa-regular fa-paper-plane fa-xl"></i>
+    <% end %>
   <% end %>
 </div>

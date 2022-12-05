@@ -1,0 +1,29 @@
+.message-form{
+  display: flex;
+  height: 60px;
+  width: 100%;
+  border: none;
+  gap: 20px;
+  .msg-input{
+    height: 75%;
+    width: 60%;
+    border-radius: 25px;
+    background-color: $white;
+    color: $dark;
+    &::placeholder{
+      margin-left: 8px;
+    }
+  }
+  .submit{
+    width: 3rem;
+    background-color: transparent;
+    border: none;
+    color: $blue;
+  }
+  .photo{
+    width: 3rem;
+    background-color: inherit;
+    border: none;
+    color: $white;
+  }
+}
