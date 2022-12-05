@@ -1,7 +1,7 @@
 <div>
   <div>
-  <%= form_with url: parties_path, class: "search-form-control form-group", method: :post do |f| %>
-    <%= f.text_field :address, placeholder: "Enter Location...", class: "form-control string required" %>
+  <%= form_for @party, class: "search-form-control form-group-hangover" do |f| %>
+    <%= f.text_field :address, placeholder: "Enter Location..." %>
   <% end %>
   </div>
   <div>
