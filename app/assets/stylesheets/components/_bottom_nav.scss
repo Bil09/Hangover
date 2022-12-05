@@ -1,79 +1,78 @@
-.bottom_nav {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    height: 60.5px;
-    background-color: $black;
-    width: 100vw;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.btn-plus {
-    background-color: $blue;
-    border-radius: 50%;
-    height: 60.5px;
-    width: 60.5px;
-    position: absolute;
-    top: -2rem;
-    margin-inline: 40vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 3px $grey;
-}
-
-.plus-icon {
-    color: $white;
-}
-
-.item_right {
-    margin-right: 25px;
-}
-
-.item_left {
-    margin-left: 25px;
-}
-
-.item {
-    color: $white;
-}
-
-.fa-sm {
-    font-size: 26px !important;
-}
-
-.popup {
-    color: $white;
-    text-align: center;
-}
-
-.select-location {
-    background-color: $blue;
-    color: $white;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 25px;
-    width: 94px;
-}
-
-.homeparty {
-    background-color: $grey;
-    color: $white;
-    text-decoration: none;
-    border-radius: 25px;
-    width: 94px;
-    padding-left: 28px;
-    padding-right: 28px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.h2 {
-    margin-top: 0px;
-    margin-bottom: 20px;
-}
-
-.close-btn {
-    margin-left: 320px;
-}
+        .bottom_nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        height: 60.5px;
+        background-color: $black;
+        width: 100vw;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .btn-plus {
+        background-color: $blue;
+        border-radius: 50%;
+        height: 60.5px;
+        width: 60.5px;
+        position: absolute;
+        top: -2rem;
+        margin-inline: 40vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 3px $grey;
+    }
+    
+    .plus-icon {
+        color: $white;
+    }
+    
+    .item_right {
+        margin-right: 25px;
+    }
+    
+    .item_left {
+        margin-left: 25px;
+    }
+    
+    .item {
+        color: $white;
+    }
+    
+    .fa-sm {
+        font-size: 26px !important;
+    }
+    
+    .popup {
+        color: $white;
+        text-align: center;
+    }
+    
+    .select-location {
+        background-color: $blue;
+        color: $white;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 25px;
+        width: 94px;
+    }
+    
+    .homeparty {
+        background-color: $grey;
+        color: $white;
+        text-decoration: none;
+        border-radius: 25px;
+        width: 94px;
+        padding-left: 28px;
+        padding-right: 28px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .h2 {
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+    
+    .close-btn {
+        margin-left: 320px;
