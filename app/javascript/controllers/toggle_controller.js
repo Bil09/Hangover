@@ -8,8 +8,10 @@ export default class extends Controller {
     }
     toggle(event) {
         event.preventDefault()
-        this.popupTarget.classList.remove("hide-popup")
+        this.popupTarget.classList.toggle("hide-popup")
         console.log("click");
 
     }
+
+
 }
