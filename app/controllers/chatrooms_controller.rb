@@ -1,6 +1,11 @@
 class ChatroomsController < ApplicationController
   def index
-    @chatrooms = current_user.chatrooms
+    participant = Participant.find_by user: current_user
+    if participant
+      @chatrooms = participant.chatrooms
+    else
+      @chatrooms = []
+    end
   end
 
   def show

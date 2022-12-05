@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :party
-  has_many :chatrooms, through: :party
+  has_one_attached :photo
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
   has_many :invitations
   has_many :pending_invitations, -> { where confirmed: false }, class_name: 'Invitation', foreign_key: "friend_id"
