@@ -10,15 +10,20 @@
             color: #FCFCFC;
             text-align: left;
             font-size: 10px;
+            background: linear-gradient(45deg, #006EE6, #252525);
+            height: 100vh;
         }
         
         .links {
-            color: #006EE6;
+            color: #808080;
             text-decoration: none;
         }
         
-        .container {
+        .center-hangover {
             display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
         
         .robot {
@@ -28,22 +33,24 @@
     </style>
 </head>
 
+
 <body class="rails-default-error-page">
     <!-- This file lives in public/500.html -->
     <div class="dialog">
         <img src="./images/hangover_pic_big.png" alt="My image" width="100px">
 
-        <div>
+        <div class="center-hangover">
             <h1>Oops!</h1>
             <h2>This page seems not to work.</h2>
             <p>Error Code: 500</p>
         </div><br>
-        <div>
+        <img src="./images/robot-404-error-errors.2048x1704.png" alt="" width="280px" class="robot">
+        <div class="center-hangover my-4">
+
             <p>Here are some helpfule links instead:</p>
             <a href="www.hangover.lol" class="links">Homepage</a> <br>
             <a href="www.hangover.lol/chatrooms" class="links">Chatrooms</a>
         </div>
-        <img src="./images/robot-404-error-errors.2048x1704.png" alt="" width="280px" class="robot">
 </body>
 
 </html>
