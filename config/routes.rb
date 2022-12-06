@@ -6,7 +6,9 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: {
     registrations: 'users/registrations'
+    
   }
+
   resources :parties, only: [:new, :create] do
     resources :participants, only: %i[new create]
   end
@@ -14,6 +16,7 @@ Rails.application.routes.draw do
   resources :chatrooms, only: [:show, :index] do
     resources :messages, only: :create
   end
+
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
