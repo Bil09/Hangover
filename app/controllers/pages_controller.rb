@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  skip_before_action :authenticate_user!, only: :welcome
 
   def home
     @parties = Party.all
@@ -9,5 +10,8 @@ class PagesController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: {party: party })
       }
     end
+  end
+
+  def welcome
   end
 end
