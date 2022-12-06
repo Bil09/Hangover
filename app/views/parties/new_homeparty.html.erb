@@ -1,7 +1,9 @@
 <div class="container-hangover">
   <%= simple_form_for(@party) do |f| %>
     <%= f.input :name %>
-    <%= f.input :address %>
+    <%= f.input :address,
+    input_html: {data: {address_autocomplete_target: "address"}},
+    wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}%>
     <%= f.input :start_time %>
     <%= f.input :description, size: "60x10" %>
     <%= f.submit %>
