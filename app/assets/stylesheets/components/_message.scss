@@ -1,0 +1,33 @@
+.msg-blue{
+  position: relative;
+  background-color: $blue;
+  color: $grey;
+  justify-content: flex-end;
+  border-radius: 28px;
+  width: fit-content;
+  max-width: 80%;
+  padding-right: 4rem;
+  padding-bottom: 2px;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+.msg-white{
+  position: relative;
+  background-color: $white;
+  justify-content: flex-start;
+  color: $dark;
+  border-radius: 28px;
+  width: fit-content;
+  max-width: 80%;
+  padding-right: 1rem;
+  padding-bottom: 2px;
+  padding-left: 4rem;
+  margin-bottom: 2rem;
+}
+.msg-user{
+  position: absolute;
+  bottom: -1rem;
+  right: 0;
+  font-size: 1.2vh;
+  color: rgb(188, 188, 188);
+}
