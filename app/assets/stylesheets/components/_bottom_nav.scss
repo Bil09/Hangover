@@ -8,7 +8,7 @@
             justify-content: space-around;
             align-items: center;
         }
-        
+
         .btn-plus {
             background-color: $blue;
             border-radius: 50%;
@@ -22,32 +22,32 @@
             align-items: center;
             box-shadow: 0 0 3px $grey;
         }
-        
+
         .plus-icon {
             color: $white;
         }
-        
+
         .item_right {
             margin-right: 25px;
         }
-        
+
         .item_left {
             margin-left: 25px;
         }
-        
+
         .item {
             color: $white;
         }
-        
+
         .fa-sm {
             font-size: 26px !important;
         }
-        
+
         .popup {
             color: $white;
             text-align: center;
         }
-        
+
         .select-location {
             background-color: $blue;
             color: $white;
@@ -56,7 +56,7 @@
             border-radius: 25px;
             width: 94px;
         }
-        
+
         .homeparty {
             background-color: $grey;
             color: $white;
@@ -68,12 +68,15 @@
             padding-top: 10px;
             padding-bottom: 10px;
         }
-        
+
         .h2 {
-            margin-top: 0px;
-            margin-bottom: 20px;
+          margin-top: 30px;
+          margin-bottom: 30px;
+          text-align: left;
+          margin-left: 30px;
         }
-        
         .close-btn {
-            margin-left: 320px;
+          position: absolute;
+          top: 30px;
+          right: 30px;
         }
