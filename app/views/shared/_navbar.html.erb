@@ -3,6 +3,21 @@
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "Hangover_pic.png" %>
     <% end %>
-    <a href="#"><i class="fa-solid fa-bars burger"></i></a>
+
+
+<div class="btn-group">
+
+    <i type="button" class="fa-solid fa-bars burger" data-bs-toggle="dropdown" aria-expanded="false"></i>
+
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><a class="dropdown-item" href="#">Create new location</a></li>
+    <%# <li><a class="dropdown-item" href="#">Menu item</a></li> %>
+  </ul>
+</div>
+
+
   </div>
 </div>
+
+    <%# <li><%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
+    <%# </li> %>
