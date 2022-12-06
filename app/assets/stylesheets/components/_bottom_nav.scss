@@ -1,4 +1,4 @@
-        .bottom_nav {
+    .bottom_nav {
         display: flex;
         position: fixed;
         bottom: 0;
@@ -76,4 +76,11 @@
 
     .close-btn {
         margin-left: 320px;
+    }
+
+    .dropdown-menu{
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      background-color: $dark-grey;
     }
