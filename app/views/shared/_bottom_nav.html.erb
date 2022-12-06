@@ -4,7 +4,7 @@
     <a href="#"><i class="fa-regular fa-image fa-sm item_right item"></i></a>
     <span class="btn-plus" data-action="click->toggle#toggle"><i class="fa-solid fa-plus fa-sm plus-icon"></i></span>
     <%= link_to "", chatrooms_path, class:"fa-regular fa-comments fa-sm item_left item text-decoration-none" %>
-    <span class="dropup border-0"><%= cl_image_tag current_user.photo.key, height: 38, width: 38, crop: :fill,
+    <span class="dropup border-0"><%= cl_image_tag current_user.photo.key, height: 28, width: 28, crop: :fill,
     class: "dropdown-toggle rounded-circle",
     data: {bs_toggle: "dropdown", turbo: false },
     aria: {expanded: false, haspopup: true}
