@@ -1,0 +1,23 @@
+.mapboxgl-popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $black;
+  color: $blue;
+  border-radius: 15px;
+  width: 60vw !important;
+  height: 10vh !important;
+  padding: 0.5rem;
+}
+.mapboxgl-popup-content{
+  background-color: inherit !important;
+}
+.mapboxgl-popup-close-button{
+  width: 25px;
+  height: 25px;
+  font-size: 2.4vh;
+  color: $white;
+  &:hover{
+    color: $blue;
+  }
+}
