@@ -1,11 +1,7 @@
 class ChatroomsController < ApplicationController
   def index
-    participant = Participant.find_by user: current_user
-    if participant
-      @chatrooms = participant.chatrooms
-    else
-      @chatrooms = []
-    end
+    participations = Participant.where(user: current_user)
+    @chatrooms = participations.map { |participation| participation.party.chatroom }
   end
 
   def show

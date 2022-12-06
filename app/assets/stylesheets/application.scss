@@ -5,12 +5,14 @@
 // External libraries
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome";
+@import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
 * {
     box-sizing: content-box;
 }
-.w-87{
-  width: 87%;
+
+.w-87 {
+    width: 87%;
 }
