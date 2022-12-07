@@ -5,11 +5,11 @@ Rails.application.routes.draw do
   get "map", to: "maps#index"
   get "party", to: "parties#new"
   get "homeparty", to: "parties#new_homeparty"
+  get "feed", to: "feed#index"
 
-  devise_for :users, controllers: {
-    registrations: 'users/registrations'
-
-  }
+  devise_for :users, controllers: { registrations: 'users/registrations' }
+  post "feed", to: "posts#create", as: "new_post"
+  get "feeds", to: "posts#index", as: "posts"
 
   resources :parties, only: [:new, :create] do
     resources :participants, only: %i[new create]

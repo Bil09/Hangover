@@ -1,7 +1,78 @@
-.container-hangover {
-    display: flex;
-    justify-content: center;
-    width: 80vw;
-    height: 50px;
-    margin-top: auto;
-}
+    .container-hangover {
+        padding: 0px 30px;
+        justify-content: center;
+        margin-top: auto;
+    }
+    
+    h1 {
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+    
+    .form-control {
+        width: 303px;
+        color: $black;
+        font: inherit;
+    }
+    
+    .form-select {
+        color: $black;
+    }
+    
+    .mapboxgl-ctrl-geocoder {
+        max-width: none;
+        width: 100%;
+        border: 1px solid lightgrey;
+        box-shadow: none;
+        background-color: #808080;
+        width: none;
+    }
+    
+    .description-from {
+        padding-bottom: 50px;
+    }
+    
+    .same-height {
+        height: 50px;
+    }
+    
+    .form-control {
+        display: block;
+        width: 238px;
+        padding: 12px 45px;
+    }
+    
+    .cancel-botton {
+        text-decoration: none;
+        color: $white;
+        background-color: red;
+        padding: 13px 33px;
+        padding-right: 13px;
+        padding-left: 13px;
+        height: 24px;
+        width: 24px;
+        margin-left: 31px;
+    }
+    
+    .cancel-container {
+        align-content: center;
+    }
+    
+    .submit-form {
+        width: 322px;
+        background: $blue;
+        color: $white;
+        border-radius: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 0;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        margin-left: 95px;
+        width: 321px;
+        padding-left: 34px;
+        padding-right: 34px;
+    }

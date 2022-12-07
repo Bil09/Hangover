@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :welcome
 
   def home
+    @post = Post.new
     @parties = Party.all
     party_markers = @parties.geocoded.map do |party|
       {
