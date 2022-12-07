@@ -1,7 +1,7 @@
 <% if current_user %>
   <div class="bottom_nav" data-controller="toggle">
     <%= link_to "", root_path, class: "fa-solid fa-house fa-sm item_left item" %>
-    <%= link_to "", posts_path, class: "fa-regular fa-image fa-sm item-right item" %>
+    <%= link_to "", posts_path, class: "fa-regular fa-image fa-sm item_right item" %>
     <span class="btn-plus" data-action="click->toggle#toggle"><i class="fa-solid fa-plus fa-sm plus-icon"></i></span>
     <%= link_to "", chatrooms_path, class:"fa-regular fa-comments fa-sm item_left item text-decoration-none" %>
     <span class="dropup border-0"><%= cl_image_tag current_user.photo.key, height: 28, width: 28, crop: :fill,
