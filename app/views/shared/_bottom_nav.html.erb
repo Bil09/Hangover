@@ -19,8 +19,8 @@
         <button type="button" class="btn-close btn-close-white" aria-label="Close" data-action="click->toggle#toggle"></button>
       </div>
     <h2 class="h2"><strong>New Party</strong> </h2>
-    <%= link_to"Homeparty", homeparty_path, class:"homeparty"   %>
-    <p style="margin-top: 16px; opacity: 50%">― or ―</p>
+    <%= link_to"Create", homeparty_path, class:"select-location"   %>
+    <%# <p style="margin-top: 16px; opacity: 50%">― or ―</p>
     <%= link_to"Select location", new_party_path, class:"select-location"%>
   </div>
 <% else %>

@@ -11,15 +11,19 @@
     <p>add all <i class="fa-regular fa-square" data-check-target="checkAll" data-action="click->check#checkAll"></i></p>
   </div>
 
-  <%= form_with model: @participant, url: [@party, @participant] do |f| %>
-    <% @friends.each do |friend| %>
-      <div class="friend-card d-flex mx-auto border-1 my-3 justify-content-around align-items-center">
-        <%= image_tag "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-HD-Image.png", class: "avatar" %>
-        <p class=""><%= friend.email %></p>
-        <%= f.check_box :friend_ids, { multiple: true, class: "d-none", data: { check_target: "checkbox" } }, friend.id, false %>
-        <i class="fa-solid fa-plus mb-3" data-action="click->check#checkOne" data-check-target="checkboxIcon"> </i>
-      </div>
+    <%= form_with model: @participant, url: [@party, @participant] do |f| %>
+      <% @friends.each do |friend| %>
+        <div class="friend-card d-flex mx-auto border-1 my-3 justify-content-around align-items-center">
+          <%= image_tag "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-HD-Image.png", class: "avatar" %>
+          <p class=""><%= friend.email %></p>
+          <%= f.check_box :friend_ids, { multiple: true, class: "d-none", data: { check_target: "checkbox" } }, friend.id, false %>
+          <i class="fa-solid fa-plus mb-3" data-action="click->check#checkOne" data-check-target="checkboxIcon"> </i>
+        </div>
+      <% end %>
+  <div class="cancel-container">
+      <%= f.submit "Confirm", class: "btn btn-lg btn-primary rounded-pill fixed-bottom w-50 mx-auto my-4" %>
     <% end %>
-    <%= f.submit "Confirm", class: "btn btn-lg btn-primary rounded-pill fixed-bottom w-50 mx-auto my-4" %>
-  <% end %>
+      <%= link_to"", root_path, class:"cancel-botton fixed-bottom my-4 rounded-circle btn-close"%>
+  </div>
 </div>
+
