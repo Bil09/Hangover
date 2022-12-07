@@ -26,19 +26,15 @@
 .plus-icon {
     color: $white;
 }
-
 .item_right {
     margin-right: 25px;
 }
-
 .item_left {
     margin-left: 25px;
 }
-
 .item {
     color: $white;
 }
-
 .fa-sm {
     font-size: 26px !important;
 }
@@ -54,18 +50,42 @@
     text-decoration: none;
     padding: 10px;
     border-radius: 25px;
-    margin: 5%;
+    width: 94px;
 }
 
 .homeparty {
     background-color: $grey;
     color: $white;
     text-decoration: none;
-    padding: 10px;
     border-radius: 25px;
-    margin: 5%;
+    width: 94px;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.dropdown-menu{
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $black;
+  a{
+    text-decoration: none;
+  }
 }
 
 .h2 {
-    margin-top: 5%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
 }

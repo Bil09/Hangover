@@ -5,9 +5,17 @@
 @import "navbar";
 @import "invite_form";
 @import "bottom_nav";
-@import "inline_form";
 @import "chatroom";
+@import "font-awesome";
+@import "inline_form";
+@import "cards-chatroom";
+@import "address_autocomplete";
+@import "message_form";
+@import "message";
+@import "dropdown-home";
+@import "popup";
+@import "welcome";
 
 body {
-  background-color: rgb(25,25,25);
+    background-color: rgb(25, 25, 25);
 }

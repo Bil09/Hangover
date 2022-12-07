@@ -9,17 +9,17 @@
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="<%= asset_path 'manifest.json' %>">
+    <%= render 'shared/ios_pwa_links' %>
   </head>
-
-  <body>
+  <body class=<%= "bg-dark-grey" if controller_path == "participants"%>>
+    <%= render "shared/navbar" unless (controller_name == "parties") || (controller_name == "chatrooms" && action_name == "show") || (controller_name == "participants") || (controller_name == "pages" && action_name == "welcome") %>
     <%= render "shared/flashes" %>
-    <% unless controller_name == "parties" %>
-    <%= render "shared/navbar" %>
-    <% end %>
     <%= yield %>
-    <% unless controller_name == "parties" %>
-    <%= render "shared/bottom_nav" %>
-    <% end %>
+
+      <%= render "shared/bottom_nav" unless (controller_name == "parties") || (controller_name == "chatrooms" && action_name == "show") || (controller_name == "participants") || (controller_name == "pages" && action_name == "welcome") %>
 
   </body>
 </html>

@@ -27,9 +27,27 @@
   #new_message {
     border-top: 1px solid $gray-200;
     padding: 1rem;
+    background-color: rgb(25,25,25);
+    position: fixed;
+    bottom: 0;
+    width: 90vw;
+    left: 50%;
+    transform: translateX(-50%);
+
 
     .form-group {
       margin-bottom: 0;
     }
   }
+
+  .input-box {
+    border-radius: 50px;
+  }
+
+  .white-btn {
+    position: absolute;
+    left: 5%;
+    color: white;
+  }
+
 }

@@ -4,8 +4,14 @@
 
 import { application } from "./application"
 
+import AddressAutocompleteController from "./address_autocomplete_controller"
+application.register("address-autocomplete", AddressAutocompleteController)
+
 import ChatroomSubscriptionController from "./chatroom_subscription_controller"
 application.register("chatroom-subscription", ChatroomSubscriptionController)
+
+import CheckController from "./check_controller"
+application.register("check", CheckController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
