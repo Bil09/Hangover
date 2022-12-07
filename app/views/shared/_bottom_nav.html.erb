@@ -4,14 +4,15 @@
     <%= link_to "", posts_path, class: "fa-regular fa-image fa-sm item_right item" %>
     <span class="btn-plus" data-action="click->toggle#toggle"><i class="fa-solid fa-plus fa-sm plus-icon"></i></span>
     <%= link_to "", chatrooms_path, class:"fa-regular fa-comments fa-sm item_left item text-decoration-none" %>
-    <span class="dropup border-0"><%= cl_image_tag current_user.photo.key, height: 38, width: 38, crop: :fill,
-    class: "dropdown-toggle rounded-circle",
-    data: {bs_toggle: "dropdown", turbo: false },
-    aria: {expanded: false, haspopup: true}
-    %>
-    <div class="dropdown-menu">
-    <%= link_to "Logout", destroy_user_session_path, data: {turbo: true, turbo_method: :delete}, class: "link-danger" %>
-    </div>
+    <span>
+      <%= link_to useroptions_path do %>
+        <% if current_user.photo.attached? %>
+          <%= cl_image_tag current_user.photo.key, height: 38, width: 38, crop: :fill, class: "rounded-circle",
+          aria: {expanded: false, haspopup: true} %>
+        <% else %>
+          <%= image_tag image_path('current_user'),  height: 38, width: 38, class: "rounded-circle" %>
+        <% end %>
+      <% end %>
     </span>
 
     <div class="popup hide-popup" data-toggle-target="popup">
