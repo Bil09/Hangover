@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-Invitation.destroy_all && Message.destroy_all && Chatroom.destroy_all && Participant.destroy_all && Party.destroy_all && User.destroy_all
+Invitation.destroy_all && Message.destroy_all && Chatroom.destroy_all && Participant.destroy_all && Party.destroy_all && Spot.destroy_all && User.destroy_all
 
 test = User.create!(email: "test@test.com", password: "123123")
 puts "#{test.email} seeded 🌹"
@@ -59,7 +59,8 @@ Invitation.create!(
 )
 
 
-Party.create! user: test, start_time: Time.now, address: Faker::Address.full_address
+Party.create! user: test, start_time: Time.now, address: "Balanstraße 73, Munich"
+
 Party.create! user: User.second, start_time: Time.new(2022, 12, 15, 22, 30), address: Faker::Address.full_address
 
 Chatroom.create!(
@@ -70,6 +71,11 @@ Chatroom.create!(
 Chatroom.create!(
   party: Party.second,
   name: "Rager at Bill"
+)
+
+Spot.create!(
+  name: "LeWagon",
+  address: "Euro Youth Hostel, Munich"
 )
 
 puts "seed finised"
