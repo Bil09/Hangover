@@ -11,7 +11,7 @@ class PartiesController < ApplicationController
     @party = Party.new party_params
     @party.user = current_user
     if @party.save
-      Participant.create user: current_user, party: @party, status: true
+      # Participant.create user: current_user, party: @party, status: true
       @party.chatroom = Chatroom.create party: @party, name: @party.name
       redirect_to new_party_participant_path(@party)
     else

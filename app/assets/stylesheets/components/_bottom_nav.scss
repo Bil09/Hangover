@@ -26,19 +26,15 @@
 .plus-icon {
     color: $white;
 }
-
 .item_right {
     margin-right: 25px;
 }
-
 .item_left {
     margin-left: 25px;
 }
-
 .item {
     color: $white;
 }
-
 .fa-sm {
     font-size: 26px !important;
 }
@@ -67,6 +63,18 @@
     padding-right: 28px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+
+.dropdown-menu{
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $black;
+  a{
+    text-decoration: none;
+  }
 }
 
 .h2 {

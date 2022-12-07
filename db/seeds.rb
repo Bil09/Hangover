@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-Invitation.destroy_all && Chatroom.destroy_all && Participant.destroy_all && Party.destroy_all && User.destroy_all
+Invitation.destroy_all && Message.destroy_all && Chatroom.destroy_all && Participant.destroy_all && Party.destroy_all && User.destroy_all
 
 test = User.create!(email: "test@test.com", password: "123123")
 puts "#{test.email} seeded 🌹"
