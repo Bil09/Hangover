@@ -15,7 +15,7 @@
     <%= render 'shared/ios_pwa_links' %>
   </head>
   <body class=<%= "bg-dark-grey" if controller_path == "participants"%>>
-    <%= render "shared/navbar" unless (controller_name == "parties") || (controller_name == "chatrooms" && action_name == "show") || (controller_name == "participants") || (controller_name == "pages" && action_name == "welcome") %>
+    <%= render "shared/navbar" unless (controller_name == "chatrooms" && action_name == "show") || (controller_name == "participants") || (controller_name == "pages" && action_name == "welcome")%>
     <%= render "shared/flashes" %>
     <%= yield %>
 

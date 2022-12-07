@@ -1,12 +1,15 @@
+<h1>Create a new party</h1>
 <div class="container-hangover">
   <%= simple_form_for(@party) do |f| %>
-    <%= f.input :name %>
+    <%= f.input :name, class:"same-height" %>
     <%= f.input :address,
     input_html: {data: {address_autocomplete_target: "address"}, class: "d-none"},
     wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}%>
-    <%= f.input :start_time %>
-    <%= f.input :description, size: "60x10" %>
-    <%= f.submit %>
-  <% end %>
+    <%= f.input :start_time, class:"same"%>
+    <%= f.input :description, class:"description-from"%>
+  <div class="cancel-container">
+      <%= f.submit class:"submit-form btn btn-lg btn-primary rounded-pill fixed-bottom w-50 my-4", value:"Confirm"%>
+    <% end %>
+    <%= link_to"", root_path, class:"cancel-botton fixed-bottom my-4 rounded-circle btn-close"%>
+  </div>
 </div>
-  
