@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   root to: "pages#home"
+  get "welcome", to: "pages#welcome"
   get "map", to: "maps#index"
   get "party", to: "parties#new"
   get "homeparty", to: "parties#new_homeparty"
 
   devise_for :users, controllers: {
     registrations: 'users/registrations'
-    
+
   }
 
   resources :parties, only: [:new, :create] do
