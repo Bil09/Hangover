@@ -9,6 +9,7 @@
     align-items: center;
     z-index: 3;
 }
+
 .btn-plus {
     background-color: $blue;
     border-radius: 50%;
@@ -22,6 +23,7 @@
     align-items: center;
     box-shadow: 0 0 3px $grey;
 }
+
 .plus-icon {
     color: $white;
 }
@@ -37,10 +39,12 @@
 .fa-sm {
     font-size: 26px !important;
 }
+
 .popup {
     color: $white;
     text-align: center;
 }
+
 .select-location {
     background-color: $blue;
     color: $white;
@@ -49,6 +53,7 @@
     border-radius: 25px;
     width: 94px;
 }
+
 .homeparty {
     background-color: $grey;
     color: $white;
@@ -60,13 +65,8 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.h2 {
-    margin-top: 0px;
-    margin-bottom: 20px;
-}
-.close-btn {
-    margin-left: 320px;
-}
+
+
 .dropdown-menu{
   display: flex !important;
   flex-direction: column;
@@ -76,4 +76,17 @@
   a{
     text-decoration: none;
   }
+}
+
+.h2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
 }

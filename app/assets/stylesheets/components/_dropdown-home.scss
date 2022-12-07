@@ -1,0 +1,18 @@
+.dropdown-menu{
+    background-color:$black;
+}
+
+.dropdown-item {
+  width: 43vh;
+  text-align: center;
+  color:$white;
+  margin-top: 10px;
+}
+
+.dropdown-menu-end[data-bs-popper] {
+  right: -11px;
+}
+
+.dropdown-menu[data-bs-popper] {
+  top: 220%;
+}

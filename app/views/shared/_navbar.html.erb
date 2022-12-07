@@ -3,6 +3,23 @@
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "Hangover_pic.png" %>
     <% end %>
-    <a href="#"><i class="fa-solid fa-bars burger"></i></a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="fa-solid fa-bars burger"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav p-0">
+        <% if user_signed_in? %>
+          <li class="nav-item active">
+            <%= link_to "Create a new location", "#", class: "nav-link text-white text-center" %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link text-white" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>
