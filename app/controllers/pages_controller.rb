@@ -3,25 +3,26 @@ class PagesController < ApplicationController
 
   def home
     @parties = Party.all
-    @markers = @parties.geocoded.map do |party|
+    party_markers = @parties.geocoded.map do |party|
       {
         lat: party.latitude,
         lng: party.longitude,
-        info_window: render_to_string(partial: "info_window", locals: {party: party }),
-        # image_url: helpers.asset_url("REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS")
+        info_window: render_to_string(partial: "info_window", locals: { place: party }),
+        image_url: helpers.asset_url("blue-marker.svg")
       }
     end
 
-    # locations = Location.all
-    # location_markers = locations.geocoded.map do |party|
-    #   {
-    #     lat: party.latitude,
-    #     lng: party.longitude,
-    #     info_window: render_to_string(partial: "info_window", locals: {party: party }),
-    #     image_url: helpers.asset_url("REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS")
-    #   }
-    # end
-    # @markers = @markers + location_markers
+    spots = Spot.all
+    spot_markers = spots.geocoded.map do |spot|
+      {
+        lat: spot.latitude,
+        lng: spot.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {place: spot }),
+        image_url: helpers.asset_url("white-marker.svg")
+      }
+    end
+
+    @all_markers = party_markers + spot_markers
   end
 
   def welcome
