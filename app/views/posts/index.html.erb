@@ -1,0 +1,14 @@
+<div class="d-flex flex-column justify-content-around align-items-center">
+  <h1 class="text-center m-4">Feed</h1>
+  <%= form_for @post, url: new_post_path do |f| %>
+    <i class="fa fa-camera fa-sm item" onClick="this.nextElementSibling.nextElementSibling.click()"></i>
+    <%= f.file_field :photos, as: :file, multiple: true, onchange: "this.form.submit()", class: "d-none" %>
+  <% end %>
+</div>
+<% @posts.each do |post| %>
+  <div class="post">
+    <%= image_tag post.photos.first %>
+    <%= image_tag post.photos.last, class: "small-image" %>
+    <i class="fa-regular fa-heart heart fa-2xl"></i>
+  </div>
+  <% end %>
