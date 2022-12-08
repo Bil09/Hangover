@@ -15,21 +15,13 @@
     <%= render 'shared/ios_pwa_links' %>
 
     <!-- Facebook Open Graph data -->
-    <meta property="og:title" content="<%= meta_title %>" />
+    <meta property="og:title" content="Hangover" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="<%= request.original_url %>" />
-    <meta property="og:image" content="<%= meta_image %>" />
-    <meta property="og:description" content="<%= meta_description %>" />
-    <meta property="og:site_name" content="<%= meta_title %>" />
+    <meta property="og:url" content="www.hangover.lol" />
+    <meta property="og:image" content="cover.png" />
+    <meta property="og:description" content="This is the best webapp to go out with your friends and have fun" />
+    <meta property="og:site_name" content="Hangover - Go out and have fun" />
 
-    <!-- Twitter Card data -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="<%= DEFAULT_META["twitter_account"] %>">
-    <meta name="twitter:title" content="<%= meta_title %>">
-    <meta name="twitter:description" content="<%= meta_description %>">
-    <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
-    <meta name="twitter:image:src" content="<%= meta_image %>">
-    
   </head>
   <body class=<%= "bg-dark-grey" if controller_path == "participants"%>>
     <%= render "shared/navbar" unless (controller_name == "chatrooms" && action_name == "show") || (controller_name == "participants") || (controller_name == "pages" && action_name == "welcome")%>
