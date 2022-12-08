@@ -19,4 +19,8 @@ class User < ApplicationRecord
   def send_invitation(user)
     Invitation.create(user: self, friend_id: user.id)
   end
+
+  def add_friend(user)
+    Invitation.create(user: self, friend_id: user.id, confirmed: true)
+  end
 end
