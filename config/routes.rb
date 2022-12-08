@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
   root to: "pages#home"
-  get "welcome", to: "pages#welcome"
+  get "welcome", to: "pages#welcome", as: "welcome"
   get "useroptions", to: "pages#useroptions"
   get "map", to: "maps#index"
   get "party", to: "parties#new"
   get "homeparty", to: "parties#new_homeparty"
   get "feed", to: "feed#index"
 
-  devise_for :users, controllers: { registrations: 'users/registrations' }
+  devise_for :users, controllers: {
+    registrations: 'users/registrations',
+    sessions: 'users/sessions'
+  }
   post "feed", to: "posts#create", as: "new_post"
   get "feeds", to: "posts#index", as: "posts"
 
