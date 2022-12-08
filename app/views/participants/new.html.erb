@@ -14,8 +14,8 @@
     <%= form_with model: @participant, url: [@party, @participant] do |f| %>
       <% @friends.each do |friend| %>
         <div class="friend-card d-flex mx-auto border-1 my-3 justify-content-around align-items-center">
-          <% if current_user.photo.attached? %>
-          <%= cl_image_tag current_user.photo.key, height: 38, width: 38, crop: :fill, class: "rounded-circle",
+          <% if friend.photo.attached? %>
+          <%= cl_image_tag friend.photo.key, height: 38, width: 38, crop: :fill, class: "rounded-circle",
           aria: {expanded: false, haspopup: true} %>
         <% else %>
           <%= image_tag 'current_user.jpg',  height: 38, width: 38, class: "rounded-circle" %>
