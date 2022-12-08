@@ -26,6 +26,7 @@ export default class extends Controller {
         customMarker.style.backgroundSize = "contain"
         customMarker.style.width = "15px"
         customMarker.style.height = "20px"
+        // test
 
         // Pass the element as an argument to the new marker
         new mapboxgl.Marker(customMarker)
