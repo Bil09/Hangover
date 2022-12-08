@@ -19,7 +19,7 @@
     <%= render "shared/flashes" %>
     <%= yield %>
 
-      <%= render "shared/bottom_nav" unless (controller_name == "parties") || (controller_name == "chatrooms" && action_name == "show") || (controller_name == "participants") || (controller_name == "pages" && action_name == "welcome") %>
+      <%= render "shared/bottom_nav" unless (controller_name == "parties") || (controller_name == "invitations") || (controller_name == "chatrooms" && action_name == "show") || (controller_name == "participants") || (controller_name == "pages" && action_name == "welcome") %>
 
   </body>
 </html>
