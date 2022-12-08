@@ -1,16 +1,17 @@
-<% content_for :meta_title, "#{@chatroom.name} is on #{DEFAULT_META["meta_product_name"]}" %>
-<% content_for :meta_description, @chatroom.party.description %>
-<% content_for :meta_image, cl_image_path(@chatroom.party.user.photo.key) if @chatroom.party.user.photo.present? %>
+<div class=" chatroom" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>" data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
 
-<div class=" chatroom" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
   <h1>
     <%= link_to "<", chatrooms_path, class:"text-decoration-none white-btn" %>
-    #<%= @chatroom.name %>
+    <%= @chatroom.name %>
   </h1>
 
   <div class="messages style-chat" data-chatroom-subscription-target="messages">
     <% @chatroom.messages.each do |message| %>
-      <%= render "messages/message", message: message %>
+      <div id="message-<%= message.id %>" class="d-flex w-100 mt-2 <%= message.user == current_user ? "justify-content-end" : "justify-content-start" %>">
+        <div class=<%= message.user == current_user ? "msg-blue" : "msg-white" %>>
+          <%= render "messages/message", message: message %>
+        </div>
+      </div>
     <% end %>
   </div>
   <div class="bottom-form">
@@ -22,7 +23,7 @@
     <%= f.text_field :content,
       label: false,
       class: "msg-input border-0",
-      placeholder: "Type message..."
+      placeholder: "        Type message..."
     %>
     <%= button_tag type: "submit", class: "rounded-circle submit" do %>
       <i class="fa-regular fa-paper-plane fa-xl"></i>

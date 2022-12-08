@@ -4,21 +4,21 @@
     <div class="notification">
       <div class="notification-content">
         <li>
-          <p><small><%= Party.find(chatroom.party_id).start_time.strftime("%b %e, %l:%M %p") %></small></p>
+          <p><small><%= chatroom.party.start_time.strftime("%b %e, %l:%M %p") %></small></p>
           <h2><%= link_to chatroom.name, chatroom_path(chatroom), class:"text-decoration-none" %></h2>
-          <p><%= Party.find(chatroom.party_id).address %></p>
+          <p><%= chatroom.party.address %></p>
 
           <div class="border-top">
             <% if chatroom.messages != [] %>
-              <p><%= Participant.find(chatroom.messages[-1].participant_id).user.email%>: <%= chatroom.messages[-1].content %></p>
+              <p><%= chatroom.messages.last.participant.user.email%>: <%= chatroom.messages[-1].content %></p>
             <% else %>
               <p>No messages</p>
             <% end %>
           </div>
         </li>
       </div>
-        <% if current_user.photo.attached? %>
-          <%= cl_image_tag Party.find(chatroom.party_id).user.photo.key, crop: :fill, class: "rounded-circle avatar-large",
+        <% if chatroom.party.user.photo.attached? %>
+          <%= cl_image_tag chatroom.party.user.photo.key, crop: :fill, class: "rounded-circle avatar-large",
           aria: {expanded: false, haspopup: true} %>
         <% else %>
           <%= image_tag 'current_user.jpg', class: "rounded-circle avatar-large" %>
