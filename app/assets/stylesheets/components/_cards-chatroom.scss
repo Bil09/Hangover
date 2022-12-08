@@ -2,15 +2,21 @@
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
-  background: rgb(36,36,36);
+  background: $grey;
   padding: 8px 16px;
-  border: 1px solid rgb(235,235,235);
   border-radius: 7px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .notification .notification-content {
   flex-grow: 1;
   padding: 0 24px;
+
+  h2 {
+    margin-bottom: 0.25rem;
+    margin-top: 0.25rem;
+  }
 }
 
 .notification p {
@@ -21,9 +27,32 @@
 .notification small {
   color: #999999;
   font-weight: bold;
+
 }
 
 ul {
   list-style-type: none;
   padding: 1rem;
+}
+
+#text-alignment {
+  margin-left: 39px;
+  margin-top: 10px;
+}
+
+.border-top {
+  border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+  width: 160%;
+  position: relative;
+  left: -39px;
+  margin-top: 10px;
+}
+
+#h2-chatroom {
+  color: $white;
+  font-weight: 900;
+}
+
+.avatar-large {
+  margin-bottom: 50px;
 }
