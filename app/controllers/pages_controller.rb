@@ -30,5 +30,6 @@ class PagesController < ApplicationController
   end
 
   def useroptions
+    @post = Post.new
   end
 end

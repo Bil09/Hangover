@@ -19,10 +19,13 @@
       <div class="close-btn">
         <button type="button" class="btn-close btn-close-white" aria-label="Close" data-action="click->toggle#toggle"></button>
       </div>
-    <h2 class="h2"><strong>New Party</strong> </h2>
-    <%= link_to"Create", homeparty_path, class:"select-location"   %>
-    <%# <p style="margin-top: 16px; opacity: 50%">― or ―</p>
-    <%= link_to"Select location", new_party_path, class:"select-location"%>
+    <h2 class="h2"><strong>Options</strong> </h2>
+    <%= link_to"Create Party", homeparty_path, class:"select-location"   %>
+    <p style="margin-top: 16px; opacity: 50%">― or ―</p>
+    <%= form_for @post, url: new_post_path do |f| %>
+    <i class="add-post" onClick="this.nextElementSibling.nextElementSibling.click()">Create Post</i>
+    <%= f.file_field :photos, as: :file, multiple: true, onchange: "this.form.submit()", class: "d-none" %>
+    <% end %>
   </div>
 <% else %>
   <div class="alert alert-warning alert-dismissible fade show m-1" role="alert">
