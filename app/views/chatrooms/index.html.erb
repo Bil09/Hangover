@@ -5,14 +5,14 @@
       <div class="notification-content">
         <li>
           <p><small><%= chatroom.party.start_time.strftime("%b %e, %l:%M %p") %></small></p>
-          <h2><%= link_to chatroom.name, chatroom_path(chatroom), class:"text-decoration-none" %></h2>
-          <p><%= chatroom.party.address %></p>
+          <h2><%= link_to chatroom.name, chatroom_path(chatroom), class:"text-decoration-none", id:"h2-chatroom" %></h2>
+          <p><small><%= chatroom.party.address %></small></p>
 
           <div class="border-top">
             <% if chatroom.messages != [] %>
-              <p><%= chatroom.messages.last.participant.user.email%>: <%= chatroom.messages[-1].content %></p>
+              <p id="text-alignment"><%= chatroom.messages.last.participant.user.email%>: <%= chatroom.messages[-1].content %></p>
             <% else %>
-              <p>No messages</p>
+              <p id="text-alignment">No messages</p>
             <% end %>
           </div>
         </li>
