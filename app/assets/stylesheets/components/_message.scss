@@ -1,28 +1,43 @@
 .msg-blue{
   position: relative;
   background-color: $blue;
-  color: $grey;
+  color: #363636;
   justify-content: flex-end;
-  border-radius: 28px;
-  width: fit-content;
+  border-radius: 14px;
+  width: -webkit-fit-content;
   max-width: 80%;
-  padding-right: 4rem;
-  padding-bottom: 2px;
-  padding-left: 1rem;
+  min-width: 30px;
+  padding: 0.5rem 1rem;
   margin-bottom: 2rem;
+  color: white;
+  font-size: 20px;
 }
-.msg-white{
+// .msg-white{
+//   position: relative;
+//   background-color: $white;
+//   justify-content: flex-start;
+//   color: $dark;
+//   border-radius: 28px;
+//   width: fit-content;
+//   max-width: 80%;
+//   padding-right: 1rem;
+//   padding-bottom: 2px;
+//   padding-left: 4rem;
+//   margin-bottom: 2rem;
+// }
+
+.msg-white {
   position: relative;
   background-color: $white;
-  justify-content: flex-start;
-  color: $dark;
-  border-radius: 28px;
-  width: fit-content;
+  justify-content: flex-end;
+  border-radius: 14px;
+  width: -webkit-fit-content;
   max-width: 80%;
-  padding-right: 1rem;
-  padding-bottom: 2px;
-  padding-left: 4rem;
+  min-width: 30px;
+  padding: 0.5rem 1rem;
   margin-bottom: 2rem;
+  color: $dark;
+  font-size: 20px;
 }
 .msg-user{
   position: absolute;

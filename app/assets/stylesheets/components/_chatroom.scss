@@ -14,6 +14,7 @@
     text-align: center;
     color: white;
     background-color: rgb(25,25,25);
+    margin-top: 0;
   }
 
   .messages {
@@ -48,6 +49,20 @@
     position: absolute;
     left: 5%;
     color: white;
+  }
+
+  .fa-paper-plane::before {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .message-form .msg-input {
+    height: 75%;
+    width: 100%;
+    border-radius: 25px;
+    background-color: #FCFCFC;
+    color: #212529;
+    margin-left: 10px;
   }
 
 }
