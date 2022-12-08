@@ -14,7 +14,12 @@
     <%= form_with model: @participant, url: [@party, @participant] do |f| %>
       <% @friends.each do |friend| %>
         <div class="friend-card d-flex mx-auto border-1 my-3 justify-content-around align-items-center">
-          <%= image_tag "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-HD-Image.png", class: "avatar" %>
+          <% if current_user.photo.attached? %>
+          <%= cl_image_tag current_user.photo.key, height: 38, width: 38, crop: :fill, class: "rounded-circle",
+          aria: {expanded: false, haspopup: true} %>
+        <% else %>
+          <%= image_tag 'current_user.jpg',  height: 38, width: 38, class: "rounded-circle" %>
+        <% end %>
           <p class=""><%= friend.email %></p>
           <%= f.check_box :friend_ids, { multiple: true, class: "d-none", data: { check_target: "checkbox" } }, friend.id, false %>
           <i class="fa-solid fa-plus mb-3" data-action="click->check#checkOne" data-check-target="checkboxIcon"> </i>
@@ -26,4 +31,3 @@
       <%= link_to"", root_path, class:"cancel-botton fixed-bottom my-4 rounded-circle btn-close"%>
   </div>
 </div>
-

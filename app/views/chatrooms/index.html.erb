@@ -4,7 +4,7 @@
     <div class="notification">
       <div class="notification-content">
         <li>
-          <p><small>14th January</small></p>
+          <p><small><%= Party.find(chatroom.party_id).start_time %></small></p>
           <h2><%= link_to chatroom.name, chatroom_path(chatroom), class:"text-decoration-none" %></h2>
           <p><%= Party.find(chatroom.party_id).address %></p>
 
