@@ -8,6 +8,7 @@
     justify-content: space-around;
     align-items: center;
     z-index: 3;
+    text-decoration: none;
 }
 
 .btn-plus {
@@ -75,6 +76,9 @@
   padding-left: 30px;
   margin-top: 0px;
   font-size: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .homeparty {
     background-color: $grey;
@@ -110,4 +114,14 @@
     position: absolute;
     top: 30px;
     right: 30px;
+}
+
+a.select-location:hover {
+    color: black;
+    transition: 0.3s;
+}
+
+p.add-post:hover {
+  color: black;
+  transition: 0.3s;
 }
