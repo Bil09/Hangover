@@ -1,4 +1,4 @@
-<div class="mw-100" data-controller="check" data-check-party-value=<%= params[:party_id]%>>
+<div class="container d-flex flex-column g-0 align-items-center" data-controller="check" data-check-party-value=<%= params[:party_id]%>>
   <%= form_with url: "search_friend/:email", method: :post, class: "inline-hangover-form my-3" do |f| %>
     <%= f.text_field :email, placeholder: "Search...", class: "bg-white border-0" %>
     <%= button_tag(type: "submit", class: "btn btn-flat") do %>
@@ -11,9 +11,9 @@
     <p>add all <i class="fa-regular fa-square" data-check-target="checkAll" data-action="click->check#checkAll"></i></p>
   </div>
 
-    <%= form_with model: @participant, url: [@party, @participant] do |f| %>
+    <%= form_with model: @participant, url: [@party, @participant], class: "d-flex w-75 flex-column justify-content-between align-items-center" do |f| %>
       <% @friends.each do |friend| %>
-        <div class="friend-card d-flex mx-auto border-1 my-3 justify-content-around align-items-center">
+        <div class="friend-card d-flex mx-auto border-1 my-3 justify-content-between w-75 align-items-center">
           <% if friend.photo.attached? %>
           <%= cl_image_tag friend.photo.key, height: 38, width: 38, crop: :fill, class: "rounded-circle",
           aria: {expanded: false, haspopup: true} %>

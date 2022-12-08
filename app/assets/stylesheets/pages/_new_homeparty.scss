@@ -3,7 +3,7 @@
         justify-content: center;
         margin-top: auto;
     }
-    
+
     h1 {
         display: flex;
         justify-content: center;
@@ -11,17 +11,17 @@
         margin-bottom: 20px;
         font-size: 30px;
     }
-    
+
     .form-control {
         width: 303px;
         color: $black;
         font: inherit;
     }
-    
+
     .form-select {
         color: $black;
     }
-    
+
     .mapboxgl-ctrl-geocoder {
         max-width: none;
         width: 100%;
@@ -30,21 +30,21 @@
         background-color: #808080;
         width: none;
     }
-    
+
     .description-from {
         padding-bottom: 50px;
     }
-    
+
     .same-height {
         height: 50px;
     }
-    
+
     .form-control {
         display: block;
         width: 238px;
         padding: 12px 45px;
     }
-    
+
     .cancel-botton {
         text-decoration: none;
         color: $white;
@@ -54,13 +54,13 @@
         padding-left: 13px;
         height: 24px;
         width: 24px;
-        margin-left: 31px;
+        margin-left: 14px;
     }
-    
+
     .cancel-container {
         align-content: center;
     }
-    
+
     .submit-form {
         width: 322px;
         background: $blue;
