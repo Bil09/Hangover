@@ -13,7 +13,7 @@ class InvitationsController < ApplicationController
     hash = invitation_params
     users = hash[:user_ids]
     users.each do |friend|
-      current_user.send_invitation User.find friend
+      current_user.add_friend User.find friend
     end
 
     redirect_to root_path

@@ -1,28 +1,31 @@
 <div class="container mt-3" data-controller="check">
-  <h1><strong>Invite friend</strong> </h1>
+  <h1><strong>Add friend</strong> </h1>
+  <%= form_with url: new_invitation_path, class: "invite-form form-group", method: :get do |f| %>
+    <%= f.text_field :query, value: params[:query], placeholder: "Enter email of your friend...", class: "form-control invite-input rounded-pill" %>
+    <%= f.submit "Invite", class: "btn btn-sm d-none" do %>
+        <i class="fas fa-search"></i>
+    <% end %>
+  <% end %>
 
   <div class="d-flex w-87 mx-auto justify-content-between">
     <p>List of Users</p>
     <p>add all <i class="fa-regular fa-square" data-check-target="checkAll" data-action="click->check#checkAll"></i></p>
   </div>
 
-  <%= @users.size %>
-
-  <%= form_with url: new_invitation_path, class: "search-form-control form-group", method: :get do |f| %>
-    <%= f.text_field :query, value: params[:query], placeholder: "Enter email of your friend...", class: "form-control string required" %>
-    <%= f.submit "Invite", class: "btn btn-flat" do %>
-        <i class="fas fa-search"></i>
+  <%= form_with model: @invitation, url: [@invitation] do |f| %>
+    <% @users.each do |user| %>
+      <% next if user == current_user %>
+      <div class="user-card d-flex mx-auto border-1 my-3 justify-content-around align-items-center">
+      <% if user.photo.attached? %>
+        <%= cl_image_tag current_user.photo.key, height: 38, width: 38, crop: :fill, class: "avatar" %>
+      <% else %>
+        <%= image_tag "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-HD-Image.png", class: "avatar" %>
+      <% end %>
+        <p class=""><%= user.email %></p>
+        <%= f.check_box :user_ids, { multiple: true, class: "d-none", data: { check_target: "checkbox" } }, user.id, false %>
+        <i class="fa-solid fa-plus mb-3" data-action="click->check#checkOne" data-check-target="checkboxIcon"> </i>
+      </div>
+      <%= f.submit "Confirm", class: "btn btn-lg btn-primary rounded-pill fixed-bottom w-50 mx-auto my-4" %>
     <% end %>
   <% end %>
-<%= form_with model: @invitation, url: [@invitation] do |f| %>
-  <% @users.each do |user| %>
-          <div class="user-card d-flex mx-auto border-1 my-3 justify-content-around align-items-center">
-            <%= image_tag "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-HD-Image.png", class: "avatar" %>
-            <p class=""><%= user.email %></p>
-            <%= f.check_box :user_ids, { multiple: true, class: "d-none", data: { check_target: "checkbox" } }, user.id, false %>
-            <i class="fa-solid fa-plus mb-3" data-action="click->check#checkOne" data-check-target="checkboxIcon"> </i>
-          </div>
-          <%= f.submit "Confirm", class: "btn btn-lg btn-primary rounded-pill fixed-bottom w-50 mx-auto my-4" %>
-  <% end %>
-<% end %>
 </div>
