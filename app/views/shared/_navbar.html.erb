@@ -13,6 +13,7 @@
         <% if user_signed_in? %>
           <li class="nav-item active">
             <%= link_to "Create a new location", "#", class: "nav-link text-white text-center" %>
+            <%= link_to "Add friend", new_invitation_path, class: "nav-link text-white text-center" %>
           </li>
         <% else %>
           <li class="nav-item">
