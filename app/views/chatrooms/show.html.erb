@@ -1,3 +1,7 @@
+<% content_for :meta_title, "#{@chatroom.name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @chatroom.party.description %>
+<% content_for :meta_image, cl_image_path(@chatroom.party.user.photo.key) if @chatroom.party.user.photo.present? %>
+
 <div class=" chatroom" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
   <h1>
     <%= link_to "<", chatrooms_path, class:"text-decoration-none white-btn" %>
