@@ -8,6 +8,7 @@
     justify-content: space-around;
     align-items: center;
     z-index: 3;
+    text-decoration: none;
 }
 
 .btn-plus {
@@ -55,14 +56,30 @@
     text-decoration: none;
     border-radius: 50px;
     width: 94px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-right: 60px;
-    padding-left: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
     margin-top: 0px;
     font-size: 20px;
 }
 
+.add-post {
+  background-color: $blue;
+  color: $white;
+  text-decoration: none;
+  border-radius: 50px;
+  width: 94px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-top: 0px;
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .homeparty {
     background-color: $grey;
     color: $white;
@@ -88,7 +105,7 @@
 
 .h2 {
     margin-top: 30px;
-    margin-bottom: 70px;
+    margin-bottom: 45px;
     text-align: left;
     margin-left: 30px;
 }
@@ -97,4 +114,14 @@
     position: absolute;
     top: 30px;
     right: 30px;
+}
+
+a.select-location:hover {
+    color: black;
+    transition: 0.3s;
+}
+
+p.add-post:hover {
+  color: black;
+  transition: 0.3s;
 }

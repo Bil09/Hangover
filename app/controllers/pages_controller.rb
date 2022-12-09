@@ -2,6 +2,8 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :welcome
 
   def home
+    redirect_to welcome_path unless current_user.present?
+
     @post = Post.new
     @parties = Party.all
     party_markers = @parties.geocoded.map do |party|
@@ -30,5 +32,6 @@ class PagesController < ApplicationController
   end
 
   def useroptions
+    @post = Post.new
   end
 end

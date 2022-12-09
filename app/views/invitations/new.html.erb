@@ -1,10 +1,12 @@
-<div class="container mt-3" data-controller="check">
+<div class="container mt-3 g-0" data-controller="check">
   <h1><strong>Add friend</strong> </h1>
   <%= form_with url: new_invitation_path, class: "invite-form form-group", method: :get do |f| %>
+  <div class="input-group">
     <%= f.text_field :query, value: params[:query], placeholder: "Enter email of your friend...", class: "form-control invite-input rounded-pill" %>
-    <%= f.submit "Invite", class: "btn btn-sm d-none" do %>
+    <%= button_tag type: "submit",  class: "btn btn-sm d-none" do %>
         <i class="fas fa-search"></i>
     <% end %>
+  </div>
   <% end %>
 
   <div class="d-flex w-87 mx-auto justify-content-between">
