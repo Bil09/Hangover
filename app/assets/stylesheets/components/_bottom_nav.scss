@@ -61,25 +61,26 @@
     padding-right: 30px;
     padding-left: 30px;
     margin-top: 0px;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .add-post {
-  background-color: $blue;
-  color: $white;
-  text-decoration: none;
-  border-radius: 50px;
-  width: 94px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 30px;
-  padding-left: 30px;
-  margin-top: 0px;
-  font-size: 20px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+    background-color: $grey;
+    color: $white;
+    text-decoration: none;
+    border-radius: 50px;
+    width: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-top: 0px;
+    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
 .homeparty {
     background-color: $grey;
     color: $white;
@@ -122,6 +123,6 @@ a.select-location:hover {
 }
 
 p.add-post:hover {
-  color: black;
-  transition: 0.3s;
+    color: black;
+    transition: 0.3s;
 }
