@@ -8,8 +8,7 @@
       <%= link_to useroptions_path do %>
         <% if current_user.photo.attached? %>
           <a class="dropup" data-bs-toggle="dropdown" aria-expanded="false">
-            <%= cl_image_tag current_user.photo.key, height: 38, width: 38, crop: :fill, class: "rounded-circle"
-             %>
+            <%= cl_image_tag current_user.photo.key, height: 38, width: 38, crop: :fill, class: "rounded-circle"%>
             <ul class="dropdown-menu d-flex flex-column justify-content-center align-item-center">
               <%= link_to "Logout", destroy_user_session_path, class: "link-danger text-decoration-none", data: {turbo_method: :delete} %>
             </ul>
