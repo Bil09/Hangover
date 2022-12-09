@@ -1,11 +1,11 @@
 <div class="d-flex flex-column justify-content-around align-items-center">
   <h1 class="text-center m-4">Feed</h1>
-  
+
 </div>
 <% @posts.each do |post| %>
-  <div class="post">
-    <%= image_tag post.photos.first %>
-    <%= image_tag post.photos.last, class: "small-image" %>
-    <i class="fa-regular fa-heart heart fa-2xl"></i>
+  <div class="post" data-controller="click">
+    <%= image_tag post.photos.first, data: { click_target: "first" } %>
+    <%= image_tag post.photos.last, class: "small-image", data: { click_target: "second", action: "click->click#switchImage" } %>
+    <i class="fa-regular fa-heart heart fa-2xl" data-click-target="heart" data-action="click->click#switchHeart"></i>
   </div>
   <% end %>
